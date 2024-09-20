@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="card">
+        <img src="https://assets.vogue.in/photos/5d288836e2f0130008fa5d30/1:1/w_1080,h_1080,c_limit/model%20nidhi%20sunil.jpg"
+            alt="">
+        <h1>Lorem ipsum </h1>
+        <h5>stranger</h5>
+        <div id="btn-container">
+
+            <!-- <button id="remove">Remove</button> -->
+            <button id="add">Add friend</button>
+
+        </div>
+    </div>
+    <script>
+        var stranger = document.querySelector("h5")
+        var addfriend = document.querySelector("#add")
+
+        var check = 0
+        addfriend.addEventListener("click", function () {
+            if (check == 0) {
+                stranger.innerHTML = "friend added"
+                stranger.style.color = "green"
+                check = 1
+                addfriend.innerHTML = "remove"
+                addfriend.style.backgroundColor = "#dadada"
+                addfriend.style.color = "black"
+            }
+            
+            else {
+                stranger.innerHTML = "stranger"
+                stranger.style.color = "red"
+                check = 0
+                addfriend.innerHTML = "Add friend"
+                addfriend.style.backgroundColor = "cadetBlue"
+                addfriend.style.color = "white"
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
